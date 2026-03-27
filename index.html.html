@@ -1,0 +1,185 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sages of Worship | Sacrifice of Worship</title>
+    <style>
+        :root {
+            --gold: #b3924e;
+            --black: #0a0a0a;
+            --cream: #f4f1ea;
+            --white: #ffffff;
+            --paper: #ede9de;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Playfair Display', serif; margin: 0; background: var(--cream); color: var(--black); line-height: 1.6; }
+        
+        /* Navigation */
+        nav { 
+            background: var(--black); 
+            padding: 0.8rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gold);
+        }
+        nav .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        nav .nav-logo { height: 40px; width: auto; }
+        nav .logo-text { color: var(--gold); font-weight: bold; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; }
+        nav .links a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
+        nav .links a:hover { color: var(--gold); }
+
+        /* Hero */
+        header { 
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1515005318787-cc6821883d22?auto=format&fit=crop&w=1600&q=80'); 
+            background-size: cover; background-position: center; height: 80vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            color: var(--white); text-align: center; padding: 0 20px;
+        }
+        .header-logo { width: 100px; margin-bottom: 20px; filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg); }
+        header h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: -1px; }
+        header p { font-size: 1.3rem; font-style: italic; color: var(--gold); margin-top: 15px; }
+
+        /* Sections */
+        .section { padding: 80px 20px; max-width: 1100px; margin: auto; text-align: center; }
+        .section h2 { font-size: 2.5rem; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px; margin-bottom: 40px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
+        .card { background: white; padding: 35px 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--gold); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.4rem; margin-top: 5px; }
+
+        /* Teaching Box */
+        .teaching-box { text-align: left; background: white; padding: 45px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: 35px; }
+        .teaching-box li { margin-bottom: 18px; border-left: 3px solid var(--gold); padding-left: 20px; list-style: none; }
+
+        /* Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 40px; }
+        .gallery-item { height: 250px; background-size: cover; background-position: center; border-radius: 4px; filter: sepia(30%) grayscale(20%); transition: 0.5s; cursor: pointer; }
+        .gallery-item:hover { filter: none; transform: scale(1.02); }
+
+        /* Leadership Specifics */
+        .leader-role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: bold; display: block; margin-bottom: 5px; }
+        .contact-btn { display: inline-block; margin-top: 10px; color: var(--black); text-decoration: none; font-size: 0.95rem; font-weight: bold; border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+
+        footer { background: var(--black); color: var(--white); padding: 70px 20px; text-align: center; }
+        .cta-btn { background: var(--gold); color: white; padding: 15px 30px; text-decoration: none; display: inline-block; margin-top: 20px; border-radius: 4px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <a href="#" class="nav-brand">
+        <img src="https://cdn-icons-png.flaticon.com/512/2907/2907230.png" alt="Logo" class="nav-logo" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);">
+        <div class="logo-text">Sages of Worship</div>
+    </a>
+    <div class="links">
+        <a href="#about">The Mandate</a>
+        <a href="#teachings">Teaching</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#join">Join Us</a>
+    </div>
+</nav>
+
+<header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2907/2907230.png" alt="Sages Logo" class="header-logo">
+    <h1>Sacrifice of Worship</h1>
+    <p>Deepen Your Worship. Discern the Ancients.</p>
+    <a href="#about" class="cta-btn">Enter the Sanctuary</a>
+</header>
+
+<div class="section" id="about">
+    <h2 style="font-size: 1.2rem; border: none; color: var(--gold); letter-spacing: 4px; margin-bottom: 10px;">OUR MANDATE</h2>
+    <p style="font-size: 1.8rem; max-width: 800px; margin: auto; line-height: 1.4; font-weight: 500;">
+        "We exist to raise a generation of worshippers who offer a sacrifice that costs them something."
+    </p>
+    <div class="grid">
+        <div class="card"><h3>Ancient Wisdom</h3><p>Exploring historical liturgies and scriptures.</p></div>
+        <div class="card"><h3>Spiritual Music</h3><p>Cultivating sounds that honor the Creator.</p></div>
+        <div class="card"><h3>Living Community</h3><p>Building a collective of dedicated believers.</p></div>
+    </div>
+</div>
+
+<div id="teachings" style="background: var(--paper); padding: 100px 20px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);">
+    <div style="max-width: 800px; margin: auto; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">The Sanctuary Word</h2>
+        <p style="color: var(--gold); letter-spacing: 2px; font-weight: bold; margin-bottom: 40px;">📖 2 KINGS 7:3–9</p>
+        <div style="font-size: 1.6rem; font-style: italic; line-height: 1.8; margin-bottom: 35px; color: #333;">“Why sit here until we die?”</div>
+        <div class="teaching-box">
+            <p>The four lepers decided <strong>to move.</strong> Staying in the same place will not change our situation.</p>
+            <ul>
+                <li><strong>Rise & Take Action:</strong> Take action today.</li>
+                <li><strong>Divine Strategy:</strong> God works behind the scenes.</li>
+                <li><strong>Sudden Breakthrough:</strong> Your provision can arrive in an instant.</li>
+                <li><strong>Good News:</strong> What God blesses you with must be shared.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="gallery">
+    <h2>Sanctuary Moments</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1459749411177-042180ce673c?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1514525253361-b83f85f553c0?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80');"></div>
+    </div>
+</div>
+
+<div class="section" id="leadership">
+    <h2>The Leadership Circle</h2>
+    <div class="grid">
+        <div class="card" style="border-top-color: var(--black); background: #fffcf5;">
+            <span class="leader-role">Chairperson</span>
+            <h3>Collins Juma</h3>
+            <a href="tel:0743281509" class="contact-btn">0743 281 509</a>
+        </div>
+        <div class="card" style="border-top-color: var(--black);">
+            <span class="leader-role">Director</span>
+            <h3>Samuel Ochola</h3>
+            <a href="tel:0704944199" class="contact-btn">0704 944 199</a>
+        </div>
+        <div class="card" style="border-top-color: var(--black);">
+            <span class="leader-role">Secretary</span>
+            <h3>Metrine</h3>
+            <a href="tel:0743253018" class="contact-btn">0743 253 018</a>
+        </div>
+        <div class="card" style="border-top-color: var(--black);">
+            <span class="leader-role">Organizing Secretary</span>
+            <h3>Faith</h3>
+            <a href="tel:0794434166" class="contact-btn">0794 434 166</a>
+        </div>
+        <div class="card" style="border-top-color: var(--black);">
+            <span class="leader-role">Treasurer</span>
+            <h3>Dan Israel</h3>
+            <a href="tel:0715625850" class="contact-btn">0715 625 850</a>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="join" style="padding-bottom: 120px;">
+    <div style="background: var(--black); color: var(--white); padding: 60px 40px; border-radius: 8px; border: 2px solid var(--gold); max-width: 850px; margin: auto;">
+        <h2 style="color: var(--gold); border: none; margin-bottom: 15px; font-size: 2.2rem;">Join the Sages</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <a href="https://wa.me/254743253018" class="cta-btn" style="background: transparent; border: 1px solid var(--gold); color: var(--gold);">MEMBERSHIP</a>
+            <a href="https://wa.me/254794434166" class="cta-btn" style="background: var(--gold);">COORDINATION</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p style="color: var(--gold); letter-spacing: 2px; font-weight: bold; margin-bottom: 25px;">SAGES OF WORSHIP</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">C. JUMA | S. OCHOLA | METRINE | FAITH | D. ISRAEL</p>
+    <p style="font-size: 0.75rem; opacity: 0.4; margin-top: 30px;">&copy; 2026 | BUILT FOR THE SPIRIT. DRIVEN BY TRUTH.</p>
+</footer>
+
+</body>
+</html>
